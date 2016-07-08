@@ -1,0 +1,43 @@
+/*main css code*/
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
+#controls{
+	text-align:center;
+}
+
+input[type=range]{
+	/*-webkit-appearance: slider-vertical;*/
+}
+
+canvas{
+	border:1px solid #ada;
+	position:relative;
+}
+
+button{
+	/*prevents click-and-hold event from selecting text on mobile*/
+	-webkit-user-select:none;
+}
+
+.drive{
+	font-size: 30px;
+	text-align:center;
+	width:50px;
+	height:50px;
+}
+
+#gripper{
+	border:2px solid gray;
+	padding:5px;
+}
+
+#title{
+	text-align:center;
+	font-size:30px;
+	text-decoration:underline;
+}

@@ -1,9 +1,36 @@
 <html>
   <head>
     <title>Video Streaming Demonstration</title>
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE, NO-STORE">
+    <script src="/static/jquery.js"></script>
+	<script src="/static/main.js"></script>
+	<link rel="stylesheet" href="/static/bootstrap.css">
+	<link rel="stylesheet" href="/static/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <h1>Video Streaming Demonstration</h1>
+    <div id="header">
+      <p id="title">Robot controller</p>
+  	</div>
+
     <img src="{{ url_for('video_feed') }}">
+
+    <div id="controls">
+      <button id="1" class="drive">&uArr;</button>
+      <br/>
+      <button id="3" class="drive">&lArr;</button>
+      <button id="4" class="drive">&rArr;</button>
+      <br/>
+      <button id="2" class="drive">&dArr;</button>
+
+      <div id="gripper">
+        <p style="text-align:center; text-decoration:underline;">Gripper</p>
+        <input type="range" name="slide" id="slide" value="15" min="15" max="170"></input>
+        <p style="float:left">Open</p>
+        <p style="float:right">Closed</p>
+        <div style="clear:both"></div>
+      </div>
+    </div>
+    
   </body>
 </html>

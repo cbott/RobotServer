@@ -3,13 +3,18 @@ from flask import Flask, render_template, Response
 
 from camera_pi import Camera
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 @app.route('/')
 def index():
     """Video streaming home page."""
     return render_template('index.html')
 
+@route('/action', method='POST')
+def action():
+    """Handle button presses"""
+    val = request.forms.get('command')
+    print(val)
 
 def gen(camera):
     """Video streaming generator function."""
