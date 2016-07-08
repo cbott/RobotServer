@@ -1,8 +1,11 @@
+#
+# Camera streaming code based on https://github.com/miguelgrinberg/flask-video-streaming
+#
+
 import time
 import io
 import threading
 import picamera
-
 
 class Camera(object):
     thread = None  # background thread that reads frames from camera
@@ -29,8 +32,6 @@ class Camera(object):
         with picamera.PiCamera() as camera:
             # camera setup
             camera.resolution = (320, 240)
-            #camera.hflip = False
-            #camera.vflip = False
 
             # let camera warm up
             camera.start_preview()
