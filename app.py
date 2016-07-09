@@ -3,7 +3,7 @@ from flask import Flask, render_template, Response
 
 from camera_pi import Camera
 
-app = Flask(__name__, static_folder='static')
+app = Flask(__name__, template_folder='site')
 
 @app.route('/')
 def index():
