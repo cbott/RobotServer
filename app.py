@@ -16,8 +16,9 @@ def index():
 def action():
     """Handle button presses - Send commands to the robot"""
     val = request.form.get('command')
+
     print("Sending ["+str(val)+"] To Arduino")
-    RobotArduino.writeNumber(val)
+    RobotArduino.writeNumber(int(val))
 
     return ('',204) #no response
 
