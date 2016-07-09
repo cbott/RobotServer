@@ -1,20 +1,24 @@
 #!/usr/bin/env python
 from flask import Flask, render_template, Response, request
-
+from i2c import I2C
 from camera_pi import Camera
+
+RobotArduino = I2C(); #The robot's arduino controller
 
 app = Flask(__name__, template_folder='site')
 
 @app.route('/')
 def index():
-    """Video streaming home page."""
+    """Main page: controller + video stream"""
     return render_template('index.html')
 
 @app.route('/action', methods=['POST'])
 def action():
-    """Handle button presses"""
+    """Handle button presses - Send commands to the robot"""
     val = request.form.get('command')
-    print(val)
+    print("Sending ["+str(val)+"] To Arduino")
+    RobotArduino.writeNumber(val)
+
     return ('',204) #no response
 
 def gen(camera):
