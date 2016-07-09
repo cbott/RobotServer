@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from flask import Flask, render_template, Response
+from flask import Flask, render_template, Response, request
 
 from camera_pi import Camera
 
@@ -10,7 +10,7 @@ def index():
     """Video streaming home page."""
     return render_template('index.html')
 
-@route('/action', method='POST')
+@app.route('/action', methods=['POST'])
 def action():
     """Handle button presses"""
     val = request.forms.get('command')
