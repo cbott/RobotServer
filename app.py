@@ -13,8 +13,9 @@ def index():
 @app.route('/action', methods=['POST'])
 def action():
     """Handle button presses"""
-    val = request.forms.get('command')
+    val = request.form.get('command')
     print(val)
+    return ('',204) #no response
 
 def gen(camera):
     """Video streaming generator function."""
