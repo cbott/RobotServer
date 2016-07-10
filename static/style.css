@@ -10,10 +10,6 @@ body {
 	text-align:center;
 }
 
-input[type=range]{
-	/*-webkit-appearance: slider-vertical;*/
-}
-
 canvas{
 	border:1px solid #ada;
 	position:relative;
@@ -35,9 +31,12 @@ button{
 	text-align: center;
 	height: 50px;
 }
-#gripper{
+.slider{
 	border:2px solid gray;
 	padding:5px;
+}
+.slider-vertical{
+	-webkit-appearance: slider-vertical;
 }
 
 #title{
