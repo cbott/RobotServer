@@ -13,15 +13,34 @@
       <p id="title">Robot controller</p>
   	</div>
 
-    <img src="{{ url_for('video_feed') }}">
+    <center> 
+      <img src="{{ url_for('video_feed') }}">
+    </center>
 
     <div id="controls">
-      <button id="1" class="drive">&uArr;</button>
-      <br/>
-      <button id="3" class="drive">&lArr;</button>
-      <button id="4" class="drive">&rArr;</button>
-      <br/>
-      <button id="2" class="drive">&dArr;</button>
+      <div class="row">
+        <div class="col-sm-5"> <!--Drivetrain-->
+          <button id="1" class="drive">&uArr;</button>
+          <br/>
+          <button id="3" class="drive">&lArr;</button>
+          <button id="4" class="drive">&rArr;</button>
+          <br/>
+          <button id="2" class="drive">&dArr;</button>
+        </div>
+        <div class="col-sm-5"> <!--Arm Controls-->
+          <button id="8" class="drive">Y+</button>
+          <br/>
+          <button id="5" class="drive">X-</button>
+          <button id="6" class="drive">X+</button>
+          <br/>
+          <button id="7" class="drive">Y-</button>          
+        </div>
+        <div class="col-sm-2">
+          <button id="10" class="drive">Z+</button>
+          <button id="9" class="drive">Z-</button>
+          <button id="255" class="drive">Home</button>
+        </div>
+      </div>
 
       <div id="gripper">
         <p style="text-align:center; text-decoration:underline;">Gripper</p>
