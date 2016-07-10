@@ -24,13 +24,17 @@ button{
 	-webkit-user-select:none;
 }
 
-.drive{
+.command-button{
 	font-size: 30px;
 	text-align:center;
 	width:50px;
 	height:50px;
 }
-
+.command-button-wide{
+	font-size: 30px;
+	text-align: center;
+	height: 50px;
+}
 #gripper{
 	border:2px solid gray;
 	padding:5px;
