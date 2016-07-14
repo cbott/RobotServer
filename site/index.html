@@ -9,13 +9,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div id="header">
-      <p id="title">Robot controller</p>
-  	</div>
-
-    <center> 
+    <div id="video-stream"> 
       <img src="{{ url_for('video_feed') }}">
-    </center>
+    </div>
 
     <div id="controls">
       <div class="row">
@@ -60,10 +56,10 @@
       </div>
     </div>
 
-    <button class="btn btn-danger" id="shutdown">
-      <span class="glyphicon glyphicon-off"></span>
-      Shutdown Server
-    </button>
-    
+    <div id="shutdown-container">
+      <button class="btn btn-danger" id="shutdown">
+        &#x26A1; Shutdown Server
+      </button>
+    </div>
   </body>
 </html>
