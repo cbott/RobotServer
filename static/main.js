@@ -8,6 +8,14 @@ $(function() {
   $("#slide").change(function() {
     $.post('/action',{ command:$("#slide").val() });
   });
+
+  $("#shutdown").click(function() {
+    var check = confirm("Are you sure you want to shut down? This action cannot be undone without manually cycling power.");
+    if(check){
+      $.post('/shutdown');
+    }
+  });
+
   
   var c = document.getElementById("canv");
   var rect = c.getBoundingClientRect();

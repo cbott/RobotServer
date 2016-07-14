@@ -26,6 +26,8 @@
           <button id="4" class="command-button">&rArr;</button>
           <br/>
           <button id="2" class="command-button">&dArr;</button>
+          <br/>
+          <button id="255" class="command-button-wide">Home</button>
         </div>
         <div class="col-xs-6"> <!--Arm Controls-->
           <button id="8" class="command-button">Y+</button>
@@ -33,18 +35,14 @@
           <button id="5" class="command-button">X-</button>
           <button id="6" class="command-button">X+</button>
           <br/>
-          <button id="7" class="command-button">Y-</button>          
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <button id="255" class="command-button-wide">Home</button>          
+          <button id="7" class="command-button">Y-</button>  
+          <br/>
           <button id="9" class="command-button">Z-</button>
-          <button id="10" class="command-button">Z+</button>
+          <button id="10" class="command-button">Z+</button>        
         </div>
       </div>
 
-      <div class="row slider"> <!--Gripper-->
+      <div class="slider"> <!--Gripper-->
         <p style="text-align:center; text-decoration:underline;">Gripper</p>
         <input type="range" name="slide" id="slide" value="15" min="15" max="170"></input>
         <p style="float:left">Open</p>
@@ -54,13 +52,18 @@
 
       <div class="row">
         <div class="col-xs-12">
-          <button id="11" class="command-button">W-</button>
-          <button id="12" class="command-button">W+</button>
-          <button id="13" class="command-button">WR-</button>
-          <button id="14" class="command-button">WR+</button>
+          <button id="11" class="command-button-wide">W-</button>
+          <button id="12" class="command-button-wide">W+</button>
+          <button id="13" class="command-button-wide">WR-</button>
+          <button id="14" class="command-button-wide">WR+</button>
         </div>
       </div>
     </div>
+
+    <button class="btn btn-danger" id="shutdown">
+      <span class="glyphicon glyphicon-off"></span>
+      Shutdown Server
+    </button>
     
   </body>
 </html>
