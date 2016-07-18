@@ -33,7 +33,7 @@ button{
 }
 .slider{
 	border:2px solid gray;
-	padding:5px;
+	padding:1px 10px 1px 10px;
 }
 .slider-vertical{
 	-webkit-appearance: slider-vertical;
