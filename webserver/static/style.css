@@ -1,0 +1,20 @@
+/*main css code*/
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
+input[type=range]{
+	-webkit-appearance: slider-vertical;
+}
+
+canvas{
+	border:1px solid #ada;
+}
+
+button{
+	/*prevents click-and-hold event from selecting text on mobile*/
+	-webkit-user-select:none;
+}
